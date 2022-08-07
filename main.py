@@ -121,19 +121,20 @@ def pay(filename):
 	   conn = cups.Connection ()
 	   printers = conn.getPrinters ()
 	   for printer in printers:
-		   print (printer, printers[printer]["device-uri"])
+		   #print (printer, printers[printer]["device-uri"])
+		   #print(printer)
 		   printer_name=printer
-	   #print(f.filename)
+	   #print("printer:"+printer_name)
 	   #file =f.filename
 	   file="static/uploads/"+filename
 	   print(file)
-	#    if pages=="":
+	   #if pages=="":
 
-	# 	   #conn.printFile (printer_name, filename, "Project Report", {})    
-	# 	   #conn.printFile (printer_name, filename, "Project Report", {"print-color-mode":"monochrome","copies":"1","sides":"two-sided-long-edge"})  
-	# 	   conn.printFile (printer_name, file, "Project Report", {"print-color-mode":color,"copies":numCopies,"sides":"one-sided"}) 
-	#    else:
-	# 	   conn.printFile (printer_name, file, "Project Report", {"print-color-mode":color,"copies":numCopies,"sides":"one-sided","page-ranges":pages}) 
+	 	   #conn.printFile (printer_name, filename, "Project Report", {})    
+	 	   #conn.printFile (printer_name, filename, "Project Report", {"print-color-mode":"monochrome","copies":"1","sides":"two-sided-long-edge"})  
+	 	   #conn.printFile (printer_name, file, "Project Report", {"print-color-mode":color,"copies":numCopies,"sides":"one-sided"}) 
+	   #else:
+	 	   #conn.printFile (printer_name, file, "Project Report", {"print-color-mode":color,"copies":numCopies,"sides":"one-sided","page-ranges":pages}) 
    
    #Removing files after print
    filesRemove=glob.glob('static/uploads/*')
